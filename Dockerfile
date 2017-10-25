@@ -25,8 +25,10 @@ RUN git checkout 2.5.2b
 WORKDIR /usr/local/STAR/source
 RUN make STAR
 ENV PATH /usr/local/STAR/source:$PATH
+
 #Set Workingdir at Home
 WORKDIR /
+
 #Cluster
 #USER 10008:9001
 #Local
