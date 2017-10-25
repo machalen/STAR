@@ -14,10 +14,10 @@ RUN apt-get install --yes \
  build-essential \
  gcc-multilib \
  apt-utils \
- zlib1g-dev \
- git
- 
+ zlib1g-dev
+
 #Install STAR
+RUN apt-get install -y git
 WORKDIR /usr/local/
 RUN git clone https://github.com/alexdobin/STAR.git
 WORKDIR /usr/local/STAR/
