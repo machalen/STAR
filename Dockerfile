@@ -9,15 +9,10 @@ FROM ubuntu:16.04
 MAINTAINER Magdalena Arnal <marnal@imim.es>
 
 #Install required packages in ubuntu
-RUN apt-get update \
-RUN apt-get install --yes \
- build-essential \
- gcc-multilib \
- apt-utils \
- zlib1g-dev
+RUN apt-get update
+RUN apt-get install --yes build-essential gcc-multilib apt-utils zlib1g-dev git
 
 #Install STAR
-RUN apt-get install -y git
 WORKDIR /usr/local/
 RUN git clone https://github.com/alexdobin/STAR.git
 WORKDIR /usr/local/STAR/
