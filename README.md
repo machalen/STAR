@@ -1,2 +1,2 @@
 # STAR
-Dokerfile to use STAR command line tool
+Dokerfile to use STAR command line tool for alignment
