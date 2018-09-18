@@ -16,7 +16,7 @@ RUN apt-get install --yes build-essential gcc-multilib apt-utils zlib1g-dev git
 WORKDIR /usr/local/
 RUN git clone https://github.com/alexdobin/STAR.git
 WORKDIR /usr/local/STAR/
-RUN git checkout 2.5.4b
+RUN git checkout 2.6.1b
 WORKDIR /usr/local/STAR/source
 RUN make STAR
 ENV PATH /usr/local/STAR/source:$PATH
