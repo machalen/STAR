@@ -1,9 +1,9 @@
 ###########################################################
-# Dockerfile to build star container images
+# Dockerfile to build STAR container images
 # Based on Ubuntu
 ############################################################
 #Build the image based on Ubuntu
-FROM ubuntu:16.04
+FROM ubuntu:latest
 
 #Maintainer and author
 MAINTAINER Magdalena Arnal <marnal@imim.es>
@@ -37,5 +37,7 @@ RUN make
 RUN rm /bin/samtools-1.5.tar.bz2
 ENV PATH $PATH:/bin/samtools-1.5
 
-#Set Workingdir at Home
+# Clean up and set Workingdir at Home
+RUN apt-get clean
+RUN apt-get remove --yes --purge build-essential gcc-multilib apt-utils zlib1g-dev wget
 WORKDIR /
